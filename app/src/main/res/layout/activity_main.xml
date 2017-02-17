@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    tools:context="com.enet.myfirstapp.Ui.MainActivity">
+
+    <include layout="@layout/toolbar"></include>
+
+
+    <com.jude.rollviewpager.RollPagerView
+        android:id="@+id/roll_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:rollviewpager_play_delay="3000"/>
+
+
+    <com.enet.myfirstapp.Weight.NoScrollViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></com.enet.myfirstapp.Weight.NoScrollViewPager>
+
+    <RadioGroup
+
+        android:id="@+id/tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <!---->
+        <RadioButton
+            android:id="@+id/home_page"
+            style="@style/Button_Tab_Style"
+
+            android:drawableTop="@mipmap/home"
+            android:text="首页"
+
+            android:checked="true"
+            />
+        <!--  android:drawableTop="@mipmap/ic_launcher图片的选择器"
+         android:drawableTop="@drawable/btn_home_selector"
+        -->
+        <RadioButton
+            android:id="@+id/recommend_page"
+            style="@style/Button_Tab_Style"
+
+            android:drawableTop="@mipmap/tuijian"
+            android:checked="false"
+            android:text="推荐" />
+
+
+        <RadioButton
+            android:id="@+id/contribute_page"
+            style="@style/Button_Tab_Style"
+            android:drawableTop="@mipmap/home"
+            android:checked="false"
+            android:text="投稿" />
+
+
+    </RadioGroup>
+
+</LinearLayout>
